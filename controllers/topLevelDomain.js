@@ -9,7 +9,7 @@ exports.postTopLevelDomain = async(req, res) => {
         const {input} = req.body;
         const convertArray = input.split(',').map(url => url.trim());
         const output = countUniqueUrlsPerTopLevelDomain(convertArray)
-        res.send({output});
+        res.send({output: JSON.stringify(output)});
     } catch(e) {
         res.send({msg: "Error"})
     }

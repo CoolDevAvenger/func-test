@@ -14,6 +14,7 @@ const topLevelDomainController = require('./controllers/topLevelDomain');
 
 app.get('/functions/countUniqueUrlsPerTopLevelDomain', topLevelDomainController.getTopLevelDomain);
 app.post('/functions/countUniqueUrlsPerTopLevelDomain', topLevelDomainController.postTopLevelDomain);
+app.post('/functions/topLevelDomain', topLevelDomainController.postTopLevelDomain);
 
 app.listen(port, () => {
     console.log(`Server is running`);
